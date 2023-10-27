@@ -1,0 +1,13 @@
+.customButton {
+  top: 12px;
+  right: 14px;
+  visibility: hidden;
+}
+.customModal {
+  background-color: aliceblue;
+}
+.customModal3 {
+  width: auto;
+  /* min-width: 35%; */
+  height: auto;
+}

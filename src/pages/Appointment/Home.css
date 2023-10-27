@@ -1,0 +1,27 @@
+.custom-modal-content {
+  /* Your custom styles for the AddAppointment component inside the Modal */
+  background-color: #f5f5fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: -10px -10px 30px 0 #fff, 10px 10px 30px 0 #1d0dca17;
+  /* Add other custom styles here */
+}
+.customModal {
+  background-color: #f5f5fa;
+}
+.appointment-main{
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  /* background: #f3f7f9b0; */
+}
+.add-appoint-btn:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: #614BC3;
+}
+@media screen and (max-width: 800px) {
+  .customModal {
+    width: 90%; /* Adjust the width for small screens */
+  }
+}

@@ -1,0 +1,11 @@
+
+*{
+  margin: 0px;
+  padding: 0px;
+  /* overflow-x: hidden; */
+  font-family: sans-serif;
+}
+.right-body{
+  background: #f3f7f9b0;
+  height: 100vh;
+}

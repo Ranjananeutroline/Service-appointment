@@ -1,0 +1,12 @@
+
+@media (max-width: 768px) {
+    .mobile-text {
+      display: none;
+    }
+    .NavSidebar {
+      display: none;
+    }
+    .NavSidebar.open {
+      display: block;
+    }
+  }
