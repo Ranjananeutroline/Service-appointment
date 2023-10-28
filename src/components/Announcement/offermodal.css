@@ -31,7 +31,7 @@
   width:385px;
 }
 .off-input:focus{
-  border: 2px solid rgba(83, 211, 228, 0.438) !important;
+  border: 1.5px solid rgba(83, 211, 228, 0.438) !important;
 }
 /* .add-decript{
   border: none;

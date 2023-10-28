@@ -48,8 +48,8 @@ const AnnounceModal = ({ onCloseModal, announcement }) => {
       <div className="text-[16px] py-2 flex flex-col">
         <label className="text-[16px]">Title </label>
         <input
-           className="off-input text-[14px] bg-[#E4F0FC]"
-           style={{boxShadow: "rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.1) 0px 1px 1px"}}
+           className="off-input text-[14px] bg-[#dceaff4d]"
+          //  style={{boxShadow: "rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.1) 0px 1px 1px"}}
           type="text"
           name="title"
           value={data.title}
@@ -61,8 +61,8 @@ const AnnounceModal = ({ onCloseModal, announcement }) => {
           <div className=" py-2 flex flex-col w-full">
         <label className="text-[16px]">Validity </label>
         <input
-          className="off-input text-[14px] bg-[#E4F0FC]"
-          style={{boxShadow: "rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.1) 0px 1px 1px"}}
+          className="off-input text-[14px] bg-[#dceaff4d]"
+          // style={{boxShadow: "rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.1) 0px 1px 1px"}}
           type="text"
           name="validity"
           value={announcement.validity}
@@ -74,8 +74,8 @@ const AnnounceModal = ({ onCloseModal, announcement }) => {
         <div className="py-2 flex w-full flex-col">
         <label className="text-[16px]">Description </label>
         <input
-           className="off-input text-[14px] bg-[#E4F0FC]  pb-[48px]"
-           style={{boxShadow: "rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.1) 0px 1px 1px", height:"90px"}}
+           className="off-input text-[14px] bg-[#dceaff4d] pb-[48px]"
+           style={{height:"90px"}}
           type="text"
           name="description"
           value={data.description}
@@ -84,7 +84,7 @@ const AnnounceModal = ({ onCloseModal, announcement }) => {
          </div>
         </div>
       </div>
-      <div className="flex  pb-4 sm:pb-0 mt-4 gap-3 justify-end px-4 ">
+      <div className="flex  pb-4 sm:pb-0 mt-3 gap-3 justify-end px-4 ">
         {/* <button
           type="submit"
           className="bg-[#0AA1DD] text-[white] font-[600] font-inter p-3 rounded-[5px] flex justify-center  items-center text-[14px] h-[39px] "

@@ -30,19 +30,20 @@ const AnnouncementInfoModal = ({ onCloseAnnouncementModal, announcement }) => {
       <div className="w-full sm:w-[450px] flex flex-col gap-2 px-4 py-3">
         <div className="w-full">
           <div className="text-[16px] py-2 flex flex-col">
-            <label className="text-[16px]">Announcement Title: {data.title}</label>
+            <label className="text-[16px]"><span style={{color:"#5272F2"}}>Title: </span>
+             {data.title}</label>
            
           </div>
         </div>
         <div>
-          <div className=" flex flex-col w-full text-[16px]">
-            Announcement Validity: {data.validity}
+          <div className="w-full text-[16px]">
+          <span style={{color:"#5272F2"}}>Validity: </span> {data.validity}
            
           </div>
         </div>
         <div className="  flex items-center justify-center ">
-          <div className="text-[16px] py-2 flex w-full flex-col">
-            Description: {data.description}
+          <div className="text-[16px] py-2  w-full ">
+          <span style={{color:"#5272F2"}}>Description: </span> {data.description}
            
           </div>
         </div>

@@ -87,7 +87,7 @@ setAddAnnouncementModalOpen(true)
           <button
             className={`border-r offer-select${
               activeTab === "offers"
-                ? "border-gray-300 bg-gradient bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
+                ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
                 : ""
             } h-[50px] w-[100px]`}
             style={
@@ -108,7 +108,7 @@ setAddAnnouncementModalOpen(true)
           <button
             className={`border-r offer-select${
               activeTab === "announcement"
-                ? "border-gray-300 bg-gradient bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
+                ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
                 : ""
             } h-[50px] w-[150px]`}
             style={
@@ -126,7 +126,7 @@ setAddAnnouncementModalOpen(true)
           <button
             className={`border-r offer-select${
               activeTab === "expired"
-                ? "border-gray-300 bg-gradient bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
+                ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
                 : ""
             } h-[50px] w-[100px]`}
             style={

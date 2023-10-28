@@ -98,7 +98,7 @@ function Appointment() {
           <button
             // onClick={onOpenModal2}
             onClick={onOpenModal}
-            className="bg-[#f8f8f8] hidden md:flex px-2 py-2 md:px-[11px] md:py-[8px] text-[#5B76FC] font-[600] shadow-md md:rounded-[4px] add-appoint-btn"
+            className="bg-[#f8f8f8] hidden md:flex px-2 py-2 md:px-[11px] md:py-[8px] text-[#5b76fcd1] font-[600] shadow-md md:rounded-[4px] add-appoint-btn"
           >
             + Appointment
           </button>
@@ -110,7 +110,7 @@ function Appointment() {
               <button
                 className={`border-r w-full  p-3 ${
                   activeTab === "today"
-                    ? "border-gray-300  bg-gradient bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
+                    ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
                     : ""
                 } md:h-[50px] md:w-[100px] md:p-0`}
                 style={
@@ -139,7 +139,7 @@ function Appointment() {
               <button
                 className={`border-r w-[full] h-[full]  p-3  ${
                   activeTab === "upcoming"
-                    ? "border-gray-300 bg-gradient bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
+                    ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
                     : ""
                 } md:h-[50px] md:w-[120px]`}
                 style={
@@ -167,7 +167,7 @@ function Appointment() {
               <button
                 className={`border-r p-3 ${
                   activeTab === "completed"
-                    ? "border-gray-300 bg-gradient bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
+                    ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
                     : ""
                 } md:h-[50px] md:w-[130px]`}
                 style={
@@ -195,7 +195,7 @@ function Appointment() {
               <button
                 className={`border-r p-3 ${
                   activeTab === "total"
-                    ? "border-gray-300 bg-gradient bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
+                    ? "border-gray-300 bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-blue-200"
                     : ""
                 } md:h-[50px] md:w-[100px]`}
                 style={
