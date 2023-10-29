@@ -1,5 +1,5 @@
-import React from "react";
-import { Formik, useFormik } from "formik";
+import React, { useState }  from "react";
+import { Formtik, useFormik } from "formik";
 import { offerSchema } from "../../schemas/offerSchema";
 import { useDispatch, useSelector } from "react-redux";
 import {createNewOffer } from "../../redux/actions/offerAction";
@@ -11,13 +11,13 @@ const AddOffersModal = () => {
   const onHandleOfferSubmitButton = () => {};
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const [isModalOpen, setIsModalOpen] = useState(true); // State to control modal visibility
   const notify = () =>
     toast.success(
       "Offer created Successfully!!!",
       {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 3000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -56,6 +56,7 @@ const AddOffersModal = () => {
       );
       if (success) {
         notify();
+      setIsModalOpen(false); // Close the modal
 
         // navigate("/dashboard");
       } else {
@@ -88,6 +89,7 @@ const AddOffersModal = () => {
   console.log(errors);
   return (
     <>
+    {isModalOpen && ( // Render the modal conditionally based on the state
       <div>
         <form
           onSubmit={handleSubmit}
@@ -291,6 +293,7 @@ const AddOffersModal = () => {
       {/* <Calendar onSelectDate={handleSelectedDate} /> */}
         {/* </Modal> */}
       </div>
+      )}
     </>
   );
 };

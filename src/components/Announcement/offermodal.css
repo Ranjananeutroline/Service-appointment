@@ -42,6 +42,15 @@
 .add-decript:focus{
   border: 1px solid rgba(83, 211, 228, 0.438);
 }
+input[type="date"]::-webkit-calendar-picker-indicator {
+  /* Your styling here */
+  color: #dd460a!important;
+  /* background: orange!important; */
+  /* Add other styles as needed */
+}
+
+
+
 @media screen and (max-width: 767px){
   .add-offers-form{
     padding-top: 1rem;

@@ -17,6 +17,8 @@ import Simple from "../../shared/Calender/Sample";
 import Detail from "../../shared/AppointmentDetail/Detail";
 import { appointmentSchema } from "../../schemas/appointmentSchema";
 import { createNewAppointment } from "../../redux/actions/appointmentAction";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { duration } from "moment";
 const closeIcon = (
   <svg
@@ -75,29 +77,43 @@ function AddAppointment(props) {
   //   time: "",
   //   date: "",
   // });
-
+  const [isModalOpen, setIsModalOpen] = useState(true); // State to control modal visibility
   const onSubmit = async (values, actions) => {
     console.log("here");
     console.log(values);
     const fullname = values.fullname;
     const phonenumber = values.phonenumber;
-    // console.log(user);
-    // const email = user.data.details.email;
     const email = values.email;
-    // console.log(email);
     const service = values.service;
     const date = values.date;
     const time = values.time;
-    // console.log(fullname, phonenumber, email, service, date, time);
-    const success = await dispatch(
-      createNewAppointment({ fullname: fullname, email:email, phonenumber:phonenumber, service:service, date:date,time:time})
-    );
-console.log(success);
-    // console.log('success bho',success);
-    actions.resetForm();
-    setOpen(false)
-    // closeEditPopup()
-    // notify();
+  
+    const success = await dispatch(createNewAppointment({ 
+      fullname: fullname,
+      email: email,
+      phonenumber: phonenumber,
+      service: service,
+      date: date,
+      time: time
+    }));
+  
+    if (success) {
+      // Show a success notification
+      toast.success("Appointment submitted successfully!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+  
+      actions.resetForm();
+      setOpen(false); // Close the form modal
+      setIsModalOpen(false); // Close the modal
+    }
   };
 
   const {
@@ -347,6 +363,7 @@ console.log(success);
   // };
   return (
     <>
+    {isModalOpen && ( // Render the modal conditionally based on the state
       <div>
         <form
           onSubmit={handleSubmit}
@@ -596,6 +613,7 @@ console.log(success);
             </div>
           </Modal> */}
         </form>
+       
         {/* Calendar */}
         <Modal
           classNames={{
@@ -612,6 +630,7 @@ console.log(success);
           {/* <Calendar onSelectDate={handleSelectedDate} /> */}
         </Modal>
       </div>
+      )}
     </>
   );
 }

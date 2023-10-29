@@ -15,14 +15,15 @@
     font-size: 22px;
 }
 .time-box{
-    /* border: 1px solid;  */
+     /* border: 1px solid;   */
     width: 70%;
     margin: auto;
     padding: 0.5rem 0;
     
 }
 .time-col{
-    /* border: 0.5px solid #c2e9fbb9;  */
+   
+    /* border: 0.5px solid #c2e9fbb9;   */
     border-radius: 8px;
     padding: 1rem;
     margin: 0 10px 1.5rem 10px;

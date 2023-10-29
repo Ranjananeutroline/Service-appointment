@@ -547,7 +547,7 @@ function Upcoming({ childAddAppointment, searchText, searchTermFromUpcoming }) {
                   onClose={onCloseDeleteModal}
                   closeIcon={closeIcon}
                   classNames={{
-                    overlay: "customOverlay up-overlay",
+                    overlay: " up-overlay",
                     modal: "customModal",
                     closeButton: "customButton",
                   }}
