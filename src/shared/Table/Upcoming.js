@@ -13,7 +13,7 @@ import Reschedule from "../../assets/Reschedule.svg";
 import Delete from "../../assets/delete.svg";
 import Arrow from "../../assets/Arrow_Right_SM.svg";
 import { useDispatch, useSelector } from "react-redux";
-
+import { IoIosNotifications } from 'react-icons/io';
 import Pagination from "../../shared/Pagination/Pagination";
 import {
   confirmAppointmentRequestHere,
@@ -588,7 +588,8 @@ function Upcoming({ childAddAppointment, searchText, searchTermFromUpcoming }) {
                       onClick={() => handleNotifyClick(item.id)}
                     >
                       <span className="hidden  md:inline">{item.reminder}</span>
-                      <img className="w-4 " src={bell} alt="notification" />
+                      {/* <img className="w-4 " src={bell} alt="notification" /> */}
+                      <IoIosNotifications style={{color:"#ffe000", fontSize:"17px"}}/>
                     </button>
                   ) : (
                     <button className="flex gap-1 px-2 bg-[#EDEDED] text-[#0038FF] text-[14px] justify-center rounded-sm items-center p-1">

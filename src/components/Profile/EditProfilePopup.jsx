@@ -128,7 +128,7 @@ export const EditProfilePopup = ({ openEditPopup, setOpenEditPopup }) => {
           
         >
           <input
-            className={`w-full border-none rounded-[5px]  text-[14px] h-[39px] pl-[12px] border-[0.3px]   focus:bg-white focus:outline-none focus:ring-1   placeholder:text-[#8B8989] bg-[#dceaffd6] shadow-shado2  placeholder:text-[13px] sm:w-[400px] md:w-[500px] md:h-[45px] md:placeholder:text-[15px] ${
+            className={`w-full border-none rounded-[5px]  text-[12px] h-[39px] pl-[12px] border-[0.3px]   focus:bg-white focus:outline-none focus:ring-1   placeholder:text-[#8B8989] bg-[#dceaff80] shadow-shado2  placeholder:text-[13px] sm:w-[400px] md:w-[500px] md:h-[45px] md:placeholder:text-[15px] ${
               errors.fullname && touched.fullname ? "input-error" : ""
             }`}
             type="text"
@@ -136,7 +136,7 @@ export const EditProfilePopup = ({ openEditPopup, setOpenEditPopup }) => {
             id="fullname"
             onChange={handleChange}
             placeholder="Full Name"
-            style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"}}
+            style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px"}}
           />
 
           {/* <input
@@ -151,7 +151,7 @@ export const EditProfilePopup = ({ openEditPopup, setOpenEditPopup }) => {
           /> */}
 
           <input
-            className={`w-full border-none rounded-[5px]  text-[14px] h-[39px]  pl-[12px] border-[0.3px]   focus:bg-white focus:outline-none focus:ring-1   placeholder:text-[#8B8989] bg-[#dceaffd6] shadow-shado2  placeholder:text-[13px] sm:w-[400px] md:w-[500px] md:h-[45px] md:placeholder:text-[15px] ${
+            className={`w-full border-none rounded-[5px]  text-[12px] h-[39px]  pl-[12px] border-[0.3px]   focus:bg-white focus:outline-none focus:ring-1   placeholder:text-[#8B8989] bg-[#dceaff80] shadow-shado2  placeholder:text-[13px] sm:w-[400px] md:w-[500px] md:h-[45px] md:placeholder:text-[15px] ${
               errors.phonenumber && touched.phonenumber ? "input-error" : ""
             }`}
             type="number"
@@ -159,7 +159,7 @@ export const EditProfilePopup = ({ openEditPopup, setOpenEditPopup }) => {
             onChange={handleChange}
             value={values.phonenumber}
             placeholder="Phone Number"
-            style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px"}}
+            style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px"}}
           />
 
           {/* <input
@@ -174,7 +174,8 @@ export const EditProfilePopup = ({ openEditPopup, setOpenEditPopup }) => {
           /> */}
 
           <button
-            className="w-full py-2 md:py-2 rounded-[10px] font-poppins font-[600] text-[16px]  bg-[#5272f2c9] hover:bg-[#5272f2d9] active:bg-[#2C3477] text-white mt-2 "
+          style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px"}}
+            className="w-full py-2 md:py-2 rounded-[10px] font-poppins font-[600] text-[16px]  bg-[#60BFE5] hover:bg-[#60bfe5c2] active:bg-[#2C3477] text-white mt-2 "
             disabled={isSubmitting}
             type="submit"
           >

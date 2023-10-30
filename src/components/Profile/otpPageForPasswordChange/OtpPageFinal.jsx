@@ -149,12 +149,12 @@ export default function App({
             onSubmit={handleSubmit} // Handle form submission
           >
             <div>
-              <h1 className="text-[20px] ml-1 text-center  font-sans font-[700]">
+              <h1 className="text-[20px] ml-1 text-center  font-sans font-[600]">
                 OTP Verification
               </h1>
-              <p className="text-[12px] ml-1 text-center font-sans mt-2 ">
+              <p className="text-[12px] ml-1 text-center  font-sans mt-2 ">
                 Enter the OTP to -{" "}
-                <span className="font-[600] text-[14px]">
+                <span className=" text-[#19A7CE] text-[14px]">
                   {" "}
                   {user?.data.details.email}
                 </span>
@@ -174,7 +174,7 @@ export default function App({
               />
             </div>
             <div onClick={handleOtpResend} className="cursor-pointer">
-              <p className="text-[11px] text-center ml-1  w-full font-sans mt-2 ">
+              <p className="text-[12px] text-center ml-1  w-full font-sans">
                 Don’t receive code ?{" "}
                 <span className="font-[500] text-[#6A00BF] text-[13px]">
                   {" "}
@@ -182,13 +182,14 @@ export default function App({
                 </span>
               </p>
             </div>
-            <div className="flex justify-center px-5">
+            <div className="flex justify-center px-5 pb-1">
               <button
-                className="text-center w-full flex justify-center items-center h-[40px] mt-1 rounded-[6px] font-sans font-[600] text-[16px] bg-[#4556EA] sm:w-[250px] md:h-[45px] text-white  hover:bg-[#3A45B4] active:bg-[#2C3477]"
+                className="text-center w-full flex justify-center items-center h-[40px] mt-1 rounded-[6px] font-sans font-[600] text-[16px] bg-[#60BFE5] hover:bg-[#60bfe5c2] active:bg-[#2C3477] sm:w-[95px] md:h-[45px] text-white"
                 type="button "
                 style={{
                   lineHeight: "normal",
                   letterSpacing: "0.4px",
+                  boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px",
                 }}
                 onClick={handleSubmit}
               >
@@ -208,7 +209,7 @@ export default function App({
           // closeButton: "closeIconInOtpPage",
         }}
       >
-        <div>Hello bro</div>
+        {/* <div>Hello bro</div> */}
         <ChangePassword />
       </Modal>
     </>

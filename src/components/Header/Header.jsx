@@ -53,7 +53,7 @@ import React, { useState } from "react";
 import { FiMenu } from "react-icons/fi";
 import Neutroline_logo from "../images/Neutroline_logo.png";
 import header_bell from "../images/header_bell.svg";
-import header_avatar from "../images/header_avatar.png";
+import header_avatar from "../images/user.png";
 import header_down from "../images/header_down.png";
 import menu from "../images/menu.png";
 import dashboard from "../images/dashboard.png";
@@ -72,6 +72,7 @@ import { BiSolidDashboard } from "react-icons/bi";
 import { FaUserClock } from "react-icons/fa";
 import { PiSpeakerSimpleHighFill } from "react-icons/pi";
 import { IoMdSettings } from "react-icons/io";
+import { ImUser } from 'react-icons/im';
 const swipeOpenMenuStyles = {
   float: "left",
   position: "fixed",
@@ -139,13 +140,17 @@ export const Header = () => {
         <div className="flex items-center relative">
           <img
             src={header_bell}
-            className=" h-[30px] w-[23px] md:h-[33px] md:w-[33px] mr-[5px] md:mr-[14px]"
+            className=" h-[30px] w-[23px] md:h-[30px] md:w-[30px] mr-[5px] md:mr-[14px]"
           />
-          <img
+          <ImUser style={{color:"#adff2fd4"}}
+          className="relative cursor-pointer h-[30px] w-[30px] mr-[15px] mb-[2px] md:h-[30px] md:w-[30px]"
+          onClick={handleDropdownToggle}
+          />
+          {/* <img
             src={header_avatar}
             className="relative cursor-pointer h-[30px] w-[30px] mr-[10px] md:h-[40px] md:w-[40px]"
             onClick={handleDropdownToggle}
-          />
+          /> */}
           {profileDropDown && (
             <div className="absolute top-10 right-1 dropdown-content flex flex-col gap-3 bg-[#F6F8FC] px-5 py-3  shadow-lg  transition duration-200">
               <div

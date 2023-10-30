@@ -143,14 +143,15 @@ export const ChangePassword = ({
           modal: "customModal",
         }}
       >
-        <div className=" flex flex-col gap-1 w-full items-center p-2 md:p-6 bg-[#FFFFFF]">
-          <div className="flex flex-col gap-5 items-center">
-            <h1 className="text-[18px] md:text-[26px]">Change Your Password</h1>
+        <div className=" flex flex-col gap-1 w-full items-center p-4 md:p-6 bg-[#FFFFFF]">
+          <div className="flex flex-col gap-4 items-center">
+            <h1 className="text-[18px] md:text-[22px]">Change Your Password</h1>
             <div>
               <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 <div className="relative">
                   <input
-                    className={` w-full rounded-[5px]  text-[14px] h-[39px] m-1.5  border-[0.5px]   focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-500 placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[14px] ${
+                  style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px"}}
+                    className={` w-full rounded-[5px]  text-[12px] h-[39px] m-0.5  border-[0.5px]   focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-500 placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[14px] ${
                       errors.oldpassword && touched.oldpassword
                         ? "input-error"
                         : ""
@@ -179,7 +180,8 @@ export const ChangePassword = ({
                 </p>
                 <div className="relative">
                   <input
-                    className={`w-full rounded-[5px]  text-[14px] h-[39px] m-1.5  border-[0.5px]   focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-500 placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[14px] ${
+                  style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px"}}
+                    className={`w-full rounded-[5px]  text-[12px] h-[39px] m-0.5  border-[0.5px]   focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-500 placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[14px] ${
                       errors.newpassword && touched.newpassword
                         ? "input-error"
                         : ""
@@ -207,7 +209,8 @@ export const ChangePassword = ({
                 </p>
                 <div className="relative">
                   <input
-                    className={`w-full rounded-[5px]  text-[14px] h-[39px] m-1.5  border-[0.5px]   focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-500 placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[14px] ${
+                  style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px"}}
+                    className={`w-full rounded-[5px]  text-[12px] h-[39px] m-0.5  border-[0.5px]   focus:bg-white focus:outline-none focus:ring-1 focus:ring-slate-500 placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[14px] ${
                       errors.confirmnewpassword && touched.confirmnewpassword
                         ? "input-error"
                         : ""
@@ -233,7 +236,8 @@ export const ChangePassword = ({
                 <p className="text-left w-full pl-3  text-[11px] text-[red] mt-[-07px]">
                 </p>
                 <button
-                  className="w-full h-[40px] rounded-[10px] font-poppins font-[800] text-[15px] bg-[#60BFE5] md:w-[400px] text-white mt-1 "
+                style={{boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 2px"}}
+                  className="w-full h-[40px] rounded-[10px] font-poppins font-[600] text-[15.5px] bg-[#60BFE5] hover:bg-[#60bfe5c2] md:w-[400px] text-white mt-2"
                   disabled={isSubmitting}
                   type="submit"
                 >

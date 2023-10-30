@@ -61,8 +61,32 @@ transition-duration: 1s;
       margin-left: 60px;
   }
   .review{
-      gap: 0.5rem;
+      gap: 0.5rem!important;
   }
+}
+@media only screen and (max-width: 922px) {
+  .appo-div{
+      gap: 10px!important;
+  }
+  
+}
+@media only screen and (max-width: 864px) {
+  .review{
+    padding-left: 0!important;
+}
+  
+}
+@media only screen and (max-width: 869px) {
+  .appo-div{
+      margin-left: 5px!important;
+  }
+  
+}
+@media only screen and (max-width: 804px) {
+  .review{
+    width: 175px!important;
+  }
+  
 }
 @media only screen and (max-width: 853px) {
   .appo-div{

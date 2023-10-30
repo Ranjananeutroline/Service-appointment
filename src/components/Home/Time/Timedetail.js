@@ -34,8 +34,6 @@ function Timedetail() {
     setNextstate(<AppointmentComponent item={item} />);
   };
 
-  const numColumnsToShow = 6; // Set the desired number of columns to show
-
   return (
     <>
       <div className="body-div">
@@ -46,7 +44,7 @@ function Timedetail() {
 
         <Row className="time-box">
           {services && services.length > 0 ? (
-            services.slice(0, numColumnsToShow).map((item) => {
+            services.map((item) => {
               return (
                 <>
                   {/* //for less than 6 box */}

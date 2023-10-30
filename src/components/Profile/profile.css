@@ -16,7 +16,10 @@
 .edit-img:hover .choose-img{
   display: block;
   }
-
+input:focus{
+  border: 1px solid rgba(83, 211, 228, 0.438)!important;
+  background: white!important;
+}
 
 
 .toast-message {
