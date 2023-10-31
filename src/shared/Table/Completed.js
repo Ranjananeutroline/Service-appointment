@@ -19,6 +19,7 @@ import {
   deleteAppointmentHere,
   getAllAppointments,
 } from "../../redux/actions/appointmentAction";
+import "./Today.css";
 const closeIcon = (
   <svg
     width="28"
@@ -294,7 +295,7 @@ function Total() {
             <th className="font-normal w-[15%]">Services</th>
             <th className=" font-normal w-[10%]">Time</th>
             <th className="font-normal w-[10%]">Duration</th>
-            <th className=" font-normal w-[15%]">Status</th>
+            <th className=" font-normal w-[10%]">Status</th>
             <th className="font-normal w-[10%]">Action</th>
             <th className="font-normal w-[13%]">Reminder</th>
           </tr>
@@ -490,13 +491,13 @@ function Total() {
                       className="flex p-2 border  bg-[#C3ECF4] md:px-3 md:gap-1 text-[15px] justify-center items-center rounded-sm md:p-1"
                       onClick={() => handleNotifyClick(item.id)}
                     >
-                      <span className="hidden  md:inline">{item.reminder}</span>
+                      <span className="hidden  md:inline notify-text">{item.reminder}</span>
                      {/* <img className="w-4 " src={bell} alt="notification" /> */}
                      <IoIosNotifications style={{color:"#ffe000", fontSize:"17px"}}/>
                     </button>
                   ) : (
                     <button className="flex gap-1 px-2 bg-[#EDEDED] text-[#0038FF] text-[14px] justify-center rounded-sm items-center p-1">
-                      <span className="hidden md:inline">Notified</span>
+                      <span className="hidden md:inline notify-text">Notified</span>
                       <img className="w-3" src={vector} alt="notified" />
                     </button>
                   )}

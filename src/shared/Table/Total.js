@@ -15,6 +15,7 @@ import { IoIosNotifications } from 'react-icons/io';
 import { useDispatch, useSelector } from "react-redux";
 import { getAllAppointments } from "../../redux/actions/appointmentAction.js";
 import {confirmAppointmentRequestHere} from "../../redux/actions/appointmentAction.js"
+import "./Today.css";
 // import getAllAppointments from "../"
 const closeIcon = (
   <svg
@@ -177,7 +178,7 @@ console.log(data);
             <th className="font-normal w-[20%] md:w-[15%]">Services</th>
             <th className="font-normal w-[15%] md:w-[10%]">Time</th>
             <th className=" font-normal w-[15%] md:w-[10%]">Duration</th>
-            <th className=" font-normal w-[10%] md:w-[15%]">Status</th>
+            <th className=" font-normal w-[10%] md:w-[10%]">Status</th>
             <th className="font-normal w-[10%] md:w-[10%]">Action</th>
             <th className="font-normal w-[10%] md:w-[13%]">Reminder</th>
           </tr>
@@ -315,7 +316,7 @@ console.log(data);
                   <div className=" hidden md:block">
                     <svg
                       width="18"
-                      height="20"
+                      height="18"
                       viewBox="0 0 18 20"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -379,13 +380,13 @@ console.log(data);
                     className="flex p-2  bg-[#C3ECF4] md:px-3 md:gap-1 text-[15px] justify-center items-center rounded-sm md:p-1"
                     onClick={() => handleNotifyClick(item.id)}
                   >
-                    <span className="hidden  md:inline">{item.reminder}</span>
+                    <span className="hidden  md:inline notify-text">{item.reminder}</span>
                    {/* <img className="w-4 " src={bell} alt="notification" /> */}
                    <IoIosNotifications style={{color:"#ffe000", fontSize:"17px"}}/>
                   </button>
                 ) : (
                   <button className="flex gap-1 px-2 bg-[#EDEDED] text-[#0038FF] text-[14px] justify-center rounded-sm items-center p-1">
-                    <span className="hidden md:inline">Notified</span>
+                    <span className="hidden md:inline notify-text">Notified</span>
                     <img className="w-3" src={vector} alt="notified" />
                   </button>
                 )}

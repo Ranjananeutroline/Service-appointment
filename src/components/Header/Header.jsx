@@ -143,7 +143,7 @@ export const Header = () => {
             className=" h-[30px] w-[23px] md:h-[30px] md:w-[30px] mr-[5px] md:mr-[14px]"
           />
           <ImUser style={{color:"#adff2fd4"}}
-          className="relative cursor-pointer h-[30px] w-[30px] mr-[15px] mb-[2px] md:h-[30px] md:w-[30px]"
+          className="relative cursor-pointer h-[30px] w-[30px] mr-[15px] mb-[2px] md:h-[30px] md:w-[30px] user-icon"
           onClick={handleDropdownToggle}
           />
           {/* <img

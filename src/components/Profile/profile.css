@@ -26,4 +26,16 @@ input:focus{
   padding-left: 200px;
 }
 
-
+@media only screen and (max-width: 1023px){
+  .profile-main{
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 768px){
+  .profile-main{
+    margin-top: 2rem;
+  }
+  .pro-title{
+    font-size: 1.8rem;
+  }
+}

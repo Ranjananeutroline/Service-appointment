@@ -42,18 +42,7 @@ transition-duration: 1s;
       padding-right: 1.8rem;
   }
 }
-@media only screen and (max-width: 985px) {
-  .dashboard-main{
-      padding-left: 3.5rem;
-      padding-right: 3.5rem;
-  }
-}
-@media only screen and (max-width: 920px) {
-  .dashboard-main{
-      padding-left: 2.5rem;
-      padding-right: 2.5rem;
-  }
-}
+
 
 @media only screen and (max-width: 1075px) {
   .appo-div{
@@ -135,7 +124,24 @@ transition-duration: 1s;
       padding-right: 1.5rem;
   }
 }
-
+@media only screen and (max-width: 645px){
+  .first-inner h2{
+    font-size: 15px;
+  }
+  .inner-sum p{
+    font-size: 13.25px!important;
+  }
+  .review{
+    gap: 0.2rem!important;
+  }
+  .review p{
+    padding-top: 2px;
+  }
+  .review img{
+    height: 23px;
+    width: 23px;
+  }
+}
 @media only screen and (max-width: 615px) {
   /* .cards-box{
       width: 215px;
@@ -151,27 +157,29 @@ transition-duration: 1s;
       width: 20px;
   } 
 }
-@media only screen and (max-width: 599px){
- .inner-sum h2{
-  font-size: 16px;
- }
- .inner-sum img{
-  height: 15px;
-  width: 15px;
- }
- .inner-sum p{
-  font-size: 14px!important;
- }
- .review p{
-  font-size: 13px!important;
- }
- .review img{
-  height: 15.5px;
-  width: 15.5px;
-  margin-top: 3px;
- }
+@media only screen and (max-width: 607px){
+  .inner-sum {
+    padding: 0 0.5rem 0 0.5rem!important;
+}
+.first-inner h2{
+  width: 85px!important;
+}
+}
+@media only screen and (max-width: 535px){
+  .first-inner h2 {
+    width: 75px!important;
+}
+.appo-div{
+  gap: 5px!important;
+}
+.review img {
+  height: 20px;
+  width: 20px;
+  margin-top: 2px;
+}
 }
 @media only screen and (max-width: 515px){
+  
   .cards-box{
       width: 215px;
   }
@@ -201,12 +209,14 @@ transition-duration: 1s;
       padding-right: 1rem!important;
   }
 } 
-@media only screen and (max-width: 470px) {
-  
+@media only screen and (max-width: 590px){
+  .review{
+    width: 160px!important;
+  }
+}
+@media only screen and (max-width: 566px) {
  .cards-div{
   width: 100%;
-  padding-left: 1rem;
-  
  }
  .cards-box{
   width: 270px;
@@ -226,7 +236,6 @@ transition-duration: 1s;
 } 
 .dash-title{
   text-align: left;
-  padding-left: 1rem;
 }
 .see-all{
   margin-top: 1.75rem;
@@ -240,23 +249,45 @@ transition-duration: 1s;
   background: none;
   border: none;
   margin-top: 2rem;
+  border: none!important;
 }
 .inner-sum{
   background: #ebe9e98a;
 }
+.inner-sum h2{
+  font-size: 15px;
+}
+.review{
+  width: 105px!important;
+}
+}
+@media only screen and (max-width: 490px){
+  .appo-div{
+    margin-left: 10px!important;
+  }
 }
 @media only screen and (max-width: 450px){
   .inner-sum{
       height: auto!important;
       padding: 0.5rem!important;
   }
+  .inner-sum p{
+    font-size: 12px!important;
+  }
   .summ-div{
       height: auto!important;
   }
   .inner-sum h2{
-      font-size: 14.5px!important;
+      font-size: 13px!important;
   }
-  
+.appo-div{
+  margin-left: 0!important;
+}
+}
+@media only screen and (max-width: 425px){
+  .first-inner h2{
+    width: 70px!important;
+  }
 }
 @media only screen and (max-width: 416px){
   .appo-div{
@@ -287,17 +318,7 @@ transition-duration: 1s;
       width: 50%;
   }
 }
-@media only screen and (max-width: 365px){
-  .cards-div{
-      justify-content: center;
-      padding-left: 0;
-  }
-  .dash-title{
-      width: 80%;
-      margin: auto;
-      padding-left: 0;
-  }
-}
+
 @media only screen and (max-width: 347px) {
   .first-inner{
       width: 40%;

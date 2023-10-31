@@ -11,3 +11,41 @@
   /* min-width: 35%; */
   height: auto;
 }
+.mobile-view{
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 768px){
+  .desktop-view{
+    display: none;
+  }
+  .mobile-view{
+    display: block;
+  }
+  .bg-div{
+    padding: 0.8rem 0.5rem 0.5rem 0.8rem;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  }
+  .resp-service{
+    padding: 0.25rem 0.5rem;
+  }
+  .resp-status{
+    padding: 0.25rem 0.5rem;
+  }
+  .resp-time{
+    padding: 0.25rem 0.5rem;
+  }
+}
+@media only screen and (max-width: 1075px){
+  th{
+    font-size: 15px;
+  }
+  td{
+    font-size: 13.2px;
+  }
+  .notify-text{
+    font-size: 13.2px;
+  }
+}

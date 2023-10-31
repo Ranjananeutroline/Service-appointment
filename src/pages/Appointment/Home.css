@@ -20,6 +20,27 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   color: #614BC3;
 }
+
+
+@media screen and (max-width: 1040px){
+  .appointment-main{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+}
+@media screen and (max-width: 1015px){
+  .appointment-main{
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+}
+@media only screen and (max-width: 795px) {
+  .appointment-main{
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+  }
+  
+}
 @media screen and (max-width: 800px) {
   .customModal {
     width: 90%; /* Adjust the width for small screens */

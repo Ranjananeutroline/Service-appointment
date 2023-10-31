@@ -86,7 +86,7 @@ export const Profile2 = ({ toshowEditOption = true }) => {
   };
   return (
     <div
-      className="flex flex-col items-center py-9 md:mt-6  w-[100%] lg:w-[550px]"
+      className="flex flex-col items-center py-9 md:mt-6  w-[100%] lg:w-[550px] profile-main"
       style={{
         backgroundColor: "#F9FBFF",
         borderRadius: "10px",
@@ -94,7 +94,7 @@ export const Profile2 = ({ toshowEditOption = true }) => {
       }}
     >
       <div className="flex flex-col items-center gap-2 md:gap-5">
-        <span className="text-xl md:text-3xl mb-3  font-serif text-[#3F26A5]">
+        <span className="text-xl md:text-3xl mb-3  font-serif text-[#3F26A5] pro-title">
           My Profile
         </span>
         <div

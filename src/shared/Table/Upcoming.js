@@ -21,6 +21,10 @@ import {
   getAllAppointments,
 } from "../../redux/actions/appointmentAction";
 import { sentRescheduleEmailHere } from "../../redux/actions/mailAction";
+import { motion } from "framer-motion";
+import arrowbtns from "../../assets/ARROWBTNS.svg";
+import Action from "../../assets/Action.svg";
+import "./Today.css";
 
 const closeIcon = (
   <svg
@@ -301,6 +305,13 @@ function Upcoming({ childAddAppointment, searchText, searchTermFromUpcoming }) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4; // Show 4 items per page
 
+  const onOpenModal = () => {
+    setOpen(true);
+  };
+  const onCloseModal = () => {
+    setOpen(false);
+  };
+
   const onPageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
@@ -377,19 +388,28 @@ function Upcoming({ childAddAppointment, searchText, searchTermFromUpcoming }) {
   const currentData = filteredData?.slice(startIndex, endIndex);
   const handleAcceptBookAppointmentRequest = () => {};
 
+  const [expandedItem, setExpandedItem] = useState(null);
+  const [showNotified, setShowNotified] = useState(false);
+
+  const toggleExpand = (itemId) => {
+    setExpandedItem(itemId === expandedItem ? null : itemId);
+    setShowNotified(false);
+  };
+
   return (
-    <div className="border w-full overflow-x-auto">
+    <>
+    <div className="border w-full overflow-x-auto desktop-view">
       <table className="w-[800px] md:w-full h-full">
         <thead className="bg-[#E2F2FA] text-center">
           <tr className="h-[50px] text-[16px] md:text-[100%]">
-            <th className=" font-normal w-[5%]">ID</th>
-            <th className="font-normal  w-[20%]">Name</th>
-            <th className="font-normal w-[15%]">Services</th>
-            <th className="font-normal w-[10%]">Time</th>
-            <th className="font-normal w-[10%]">Duration</th>
-            <th className="font-normal w-[10%]">Status</th>
-            <th className="font-normal w-[15%]">Action</th>
-            <th className="font-normal w-[13%]">Reminder</th>
+            <th className="  font-medium w-[5%]">ID</th>
+            <th className=" font-medium w-[20%]">Name</th>
+            <th className=" font-medium w-[15%]">Services</th>
+            <th className=" font-medium w-[10%]">Time</th>
+            <th className=" font-medium w-[10%]">Duration</th>
+            <th className=" font-medium w-[10%]">Status</th>
+            <th className=" font-medium w-[15%]">Action</th>
+            <th className=" font-medium w-[13%]">Reminder</th>
           </tr>
         </thead>
         <tbody>
@@ -587,13 +607,13 @@ function Upcoming({ childAddAppointment, searchText, searchTermFromUpcoming }) {
                       className="flex p-2 border  bg-[#C3ECF4] md:px-3 md:gap-1 text-[15px] justify-center items-center rounded-sm md:p-1"
                       onClick={() => handleNotifyClick(item.id)}
                     >
-                      <span className="hidden  md:inline">{item.reminder}</span>
+                      <span className="hidden  md:inline notify-text">{item.reminder}</span>
                       {/* <img className="w-4 " src={bell} alt="notification" /> */}
                       <IoIosNotifications style={{color:"#ffe000", fontSize:"17px"}}/>
                     </button>
                   ) : (
                     <button className="flex gap-1 px-2 bg-[#EDEDED] text-[#0038FF] text-[14px] justify-center rounded-sm items-center p-1">
-                      <span className="hidden md:inline">Notified</span>
+                      <span className="hidden md:inline notify-text">Notified</span>
                       <img className="w-3" src={vector} alt="notified" />
                     </button>
                   )}
@@ -700,6 +720,214 @@ function Upcoming({ childAddAppointment, searchText, searchTermFromUpcoming }) {
         )}
       </Modal>
     </div>
+
+    <div className="mobile-view">
+     <h6 className="font-bold md:hidden  mb-2 text-left text-[18px]">
+        UPCOMING
+      </h6>
+      <div className="overflow-y-auto h-[465px]">
+        {data.map((item) => (
+          <div
+            className=" flex px-2  py-4 justify-center gap-3 items-center"
+            key={item.id}
+          >
+            <div className=" relative  w-full">
+              <div className="flex absolute top-3 right-3 text-[15px] font-medium rounded-full bg-[#8FBAF3] text-[white] w-8 h-8 justify-center items-center">
+                {item.id}
+              </div>
+              <div className=" bg-[white] flex flex-col  rounded-[0.3rem]  justify-between gap-3 bg-div">
+                <p
+                  onClick={() => onOpenDetailModal(item.id)}
+                  className="text-[16px] font-semibold "
+                >
+                  {item.name}
+                </p>
+                <div className="flex  justify-start items-center">
+                  <p className=" rounded-md border-none bg-[#5DA7DB] font-medium text-[14.2px] text-[white] resp-service">
+                    {item.services}
+                  </p>
+                </div>
+                <div className="flex justify-start items-center">
+                  <p
+                    className={`rounded-md border-none ${
+                      item.status === "Pending"
+                        ? " bg-[#46B5D1]"
+                        : "bg-[#63c046]"
+                    } font-medium text-[14.2px] text-white resp-status`}
+                  >
+                    {item.status}
+                  </p>
+                </div>
+                <div className="flex justify-start items-center">
+                  <p className="rounded-md border-none bg-[#42C2FF] font-medium text-[14px] text-[white] resp-time">
+                    {item.time}
+                  </p>
+                </div>
+
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                >
+                  <button
+                    onClick={() => toggleExpand(item.id)}
+                    className="  focus:outline-none"
+                  >
+                    <img
+                      className="w-[70px]  bottom-0 right-0 p-0 m-0  absolute "
+                      src={Action}
+                      alt="action"
+                    ></img>
+                  </button>
+                </motion.div>
+
+                {expandedItem === item.id && (
+                  <div
+                    className="absolute border-none  bottom-0 right-0 h-[120px] w-[125px]  "
+                    style={{
+                      backgroundImage: `url('${arrowbtns}')`,
+                      backgroundPosition: "right bottom",
+                      backgroundRepeat: "no-repeat",
+                    }}
+                  >
+                    <div className=" relative">
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        {!item.notified ? (
+                          <button
+                            className="flex  border-none  absolute right-2 top-6 rounded-2xl p-1.5  bg-[#ffffff] md:px-3 md:gap-1 text-[15px] justify-center items-center md:p-1"
+                            onClick={() => handleNotifyClick(item.id)}
+                          >
+                            <img
+                              className="w-4 "
+                              src={bell}
+                              alt="notification"
+                            />
+                          </button>
+                        ) : (
+                          <button className="flex border-none   absolute right-1 top-6 bg-white rounded-2xl gap-1 px-2 py-2   text-[14px] justify-center items-center md:p-1">
+                            <img className="w-4" src={vector} alt="notified" />
+                          </button>
+                        )}
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <button
+                          onClick={() => handleCommit(item.id)}
+                          className="group border-none   absolute  right-[2.5rem] top-12 bg-white rounded-2xl p-2 "
+                        >
+                          {item.status === "Pending" ? (
+                            <>
+                              <div className="">
+                                <svg
+                                  width="12"
+                                  height="12"
+                                  viewBox="0 0 17 12"
+                                  fill="none"
+                                  xmlns="http://www.w3.org/2000/svg"
+                                >
+                                  <path
+                                    d="M1 5.94979L5.94975 10.8995L15.8482 1"
+                                    stroke="#4EAD07"
+                                    strokeWidth="2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  />
+                                </svg>
+                              </div>
+                            </>
+                          ) : (
+                            <>
+                              <svg
+                                width="12"
+                                height="12"
+                                viewBox="0 0 17 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M1 5.94979L5.98139 10.8995L15.9431 1"
+                                  stroke="#4EAD07"
+                                  stroke-opacity="0.43"
+                                  stroke-width="2"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+                            </>
+                          )}
+                        </button>
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <button
+                          onClick={onOpenModal}
+                          className="group  border-none  absolute bg-white p-1.5 rounded-2xl top-[5.2rem] right-[4rem]"
+                        >
+                          <div className=" ">
+                            <svg
+                              width="14"
+                              height="14"
+                              viewBox="0 0 18 20"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M11 8V15M7 8V15M3 4V15.8C3 16.9201 3 17.4798 3.21799 17.9076C3.40973 18.2839 3.71547 18.5905 4.0918 18.7822C4.5192 19 5.07899 19 6.19691 19H11.8031C12.921 19 13.48 19 13.9074 18.7822C14.2837 18.5905 14.5905 18.2839 14.7822 17.9076C15 17.4802 15 16.921 15 15.8031V4M3 4H5M3 4H1M5 4H13M5 4C5 3.06812 5 2.60241 5.15224 2.23486C5.35523 1.74481 5.74432 1.35523 6.23438 1.15224C6.60192 1 7.06812 1 8 1H10C10.9319 1 11.3978 1 11.7654 1.15224C12.2554 1.35523 12.6447 1.74481 12.8477 2.23486C12.9999 2.6024 13 3.06812 13 4M13 4H15M15 4H17"
+                                stroke="#AD3307"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                              />
+                            </svg>
+                          </div>
+                        </button>
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <button
+                          onClick={() => setExpandedItem(false)}
+                          className=" absolute  border-none  right-[1rem] top-[5rem]"
+                        >
+                          <svg
+                            width="22"
+                            height="22"
+                            viewBox="0 0 39 39"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M17.6072 25.7184L25.8266 25.5032M25.8266 25.5032L25.6113 17.2838M25.8266 25.5032L13.1746 13.4969M1.00692 19.9843C1.27438 30.1981 9.77109 38.2612 19.9849 37.9937C30.1986 37.7262 38.2617 29.2295 37.9942 19.0158C37.7268 8.802 29.2301 0.738925 19.0163 1.00638C8.80254 1.27384 0.739463 9.77055 1.00692 19.9843Z"
+                              stroke="white"
+                              stroke-width="4"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </button>
+                      </motion.div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div> 
+      </div>
+    </>
   );
 }
 

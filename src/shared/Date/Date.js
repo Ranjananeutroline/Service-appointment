@@ -29,7 +29,7 @@ const getFormattedDate = (date) => {
 
 const App = () => {
   return (
-    <div className="font-[600] text-[16px] text-indigo-500">
+    <div className="font-[600] text-[15px] text-indigo-500 ">
       {getFormattedDate(currentDate)}
     </div>
   );
