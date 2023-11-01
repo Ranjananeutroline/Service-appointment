@@ -41,8 +41,36 @@
   }
   
 }
-@media screen and (max-width: 800px) {
-  .customModal {
-    width: 90%; /* Adjust the width for small screens */
+@media screen and (max-width: 915px){
+  .select-appoint-div{
+    width: 100%;
+    flex-direction: column;
+    justify-content: left;
+    gap: 0.5rem;
+  }
+  .search-div{
+    justify-content: left;
+    height: 50px;
   }
 }
+@media screen and (max-width: 768px){
+  .t-select{
+    width: 55%;
+  }
+  .t-select button{
+    width: 100%;
+  }
+}
+@media screen and (max-width: 477px){
+  .t-select button{
+   padding: 0.8rem!important;
+   font-size: 13px!important;
+  }
+}
+@media screen and (max-width: 425px){
+  .t-select button{
+   padding: 0.6rem!important;
+   font-size: 13px!important;
+  }
+}
+

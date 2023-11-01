@@ -50,7 +50,29 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 
-
+@media only screen and (max-width: 1040px) {
+  .announce-main{
+      padding-left: 2.5rem!important;
+      padding-right: 2.5rem!important;
+  }
+}
+@media only screen and (max-width: 1015px) {
+  .announce-main{
+      padding-left: 1.8rem!important;
+      padding-right: 1.8rem!important;
+  }
+}
+@media only screen and (max-width: 795px) {
+  .announce-main{
+      padding-left: 1.5rem!important;
+      padding-right: 1.5rem!important;
+  }
+}
+@media only screen and (max-width: 485px){
+ .select-offer-main{
+  width: 80%;
+ } 
+}
 @media screen and (max-width: 767px){
   .add-offers-form{
     padding-top: 1rem;

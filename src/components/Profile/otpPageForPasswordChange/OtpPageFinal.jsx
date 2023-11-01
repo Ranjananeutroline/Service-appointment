@@ -138,7 +138,7 @@ export default function App({
         center
         classNames={{
           overlay: "customOverlay",
-          modal: "customModal",
+          modal: "customModal otpModal",
           // closeButton: "closeIconInOtpPage",
         }}
       >
@@ -184,7 +184,8 @@ export default function App({
             </div>
             <div className="flex justify-center px-5 pb-1">
               <button
-                className="text-center w-full flex justify-center items-center h-[40px] mt-1 rounded-[6px] font-sans font-[600] text-[16px] bg-[#60BFE5] hover:bg-[#60bfe5c2] active:bg-[#2C3477] sm:w-[95px] md:h-[45px] text-white"
+                className="text-center w-full flex justify-center items-center h-[40px] mt-1 rounded-[6px] font-sans font-[600] text-[16px] bg-[#60BFE5] 
+                hover:bg-[#60bfe5c2] active:bg-[#2C3477] sm:w-[95px] md:h-[45px] text-white otp-submit"
                 type="button "
                 style={{
                   lineHeight: "normal",

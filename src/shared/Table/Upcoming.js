@@ -722,13 +722,13 @@ function Upcoming({ childAddAppointment, searchText, searchTermFromUpcoming }) {
     </div>
 
     <div className="mobile-view">
-     <h6 className="font-bold md:hidden  mb-2 text-left text-[18px]">
+     <h6 className="font-bold md:hidden  mb-2 text-center text-[18px]">
         UPCOMING
       </h6>
-      <div className="overflow-y-auto h-[465px]">
+      <div className="overflow-y-auto h-[480px]">
         {data.map((item) => (
           <div
-            className=" flex px-2  py-4 justify-center gap-3 items-center"
+            className=" flex px-2 pt-3 justify-center gap-3 items-center"
             key={item.id}
           >
             <div className=" relative  w-full">

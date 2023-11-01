@@ -59,3 +59,40 @@ overflow-x: hidden;
   max-width: 400px;
   margin: 10px auto;
 }
+
+
+@media only screen and (max-width: 800px){
+  .otpModal{
+    width: 55%!important;
+  }
+}
+@media only screen and (max-width: 695px){
+  .otpModal{
+    width: 60%!important;
+  }
+}
+@media only screen and (max-width: 639px){
+  .otp-submit{
+    width: 95px;
+  }
+}
+@media only screen and (max-width: 575px){
+  .otpModal{
+    width: 65%!important;
+  }
+}
+@media only screen and (max-width: 500px){
+  .otpModal{
+    width: 75%!important;
+  }
+}
+@media only screen and (max-width: 475px){
+  .otpModal{
+    width: 85%!important;
+  }
+}
+@media only screen and (max-width: 385px){
+  .otpModal{
+    width: 88%!important;
+  }
+}

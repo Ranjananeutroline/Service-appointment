@@ -19,9 +19,23 @@
   }
 }
 
-.closeIconInDeactivateAccount{
-  /* position: absolute;
-  left: 88%;
-  top: 1px; */
+@media screen and (max-width: 768px){
+  .deactiveModal{
+    width: 60%!important;
+  }
 }
-
+@media screen and (max-width: 660px){
+  .deactiveModal{
+    width: 70%!important;
+  }
+}
+@media screen and (max-width: 570px){
+  .deactiveModal{
+    width: 80%!important;
+  }
+}
+@media screen and (max-width: 500px){
+  .deactiveModal{
+    width: 90%!important;
+  }
+}

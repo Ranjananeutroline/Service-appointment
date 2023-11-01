@@ -31,6 +31,26 @@ input:focus{
     width: 70%;
   }
 }
+@media only screen and (max-width: 600px){
+  .profile-main{
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 500px){
+  .profile-main{
+    width: 95%;
+  }
+}
+@media only screen and (max-width: 430px){
+  .customModalTry{
+    width: 95%;
+  }
+  .bottom-edit{
+    padding-top: 2rem!important;
+    padding-bottom: 2rem!important;
+    gap: 1rem!important;
+  }
+}
 @media only screen and (max-width: 768px){
   .profile-main{
     margin-top: 2rem;

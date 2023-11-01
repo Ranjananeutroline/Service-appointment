@@ -183,7 +183,7 @@ export const EditProfilePopup = ({ openEditPopup, setOpenEditPopup }) => {
           </button>
         </form>
 
-        <div className="flex flex-wrap justify-center sm:justify-between gap-1 sm:gap-4 md:gap-0 px-4 sm:px-10 py-5">
+        <div className="flex flex-wrap justify-center sm:justify-between gap-1 sm:gap-4 md:gap-0 px-4 sm:px-10 py-5 bottom-edit">
           <div
             className="flex  cursor-pointer text-[#707074] hover:text-[#2222a2] active:text-[#0b0b32]"
             onClick={handleOtpPopup}

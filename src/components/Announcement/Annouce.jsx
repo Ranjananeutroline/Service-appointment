@@ -324,7 +324,7 @@ setAddAnnouncementModalOpen(true)
               </div>
             </div>
 
-            <div className="viewoff-btn-container">
+            <div className="viewoff-btn-container viewann-btn-container">
               {!hideViewButton[index] && (
                 <button
                   className="viewoff-btn"

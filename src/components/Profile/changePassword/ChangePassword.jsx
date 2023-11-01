@@ -140,7 +140,7 @@ export const ChangePassword = ({
         center
         classNames={{
           overlay: "customOverlay",
-          modal: "customModal",
+          modal: "customModal passwordModal",
         }}
       >
         <div className=" flex flex-col gap-1 w-full items-center p-4 md:p-6 bg-[#FFFFFF]">

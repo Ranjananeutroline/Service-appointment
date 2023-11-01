@@ -126,8 +126,8 @@ function Appointment() {
           </button>
         </div>
 
-        <div className="  w-full flex justify-between">
-          <div className="flex md:items-center md:justify-center   sm:flex-row md:flex-row ">
+        <div className="  w-full flex justify-between select-appoint-div">
+          <div className="flex md:items-center   sm:flex-row md:flex-row t-select">
             <div className="relative w-full md:w-auto">
               <button
                 className={`border-r w-full  p-3 ${
@@ -249,31 +249,26 @@ function Appointment() {
           </div>
           {/* SEARCH */}
           {!showSearch ? (
-            // <button
-            //   className="w-[50px]  h-[42px]  flex justify-center border"
-            //   onClick={() => setShowSearch(!showSearch)}
-            // >
-            //   <img
-            //     className="w-[25px] rounded-[2px]"
-            //     src={Search_Magnifying_Glass}
-            //     alt="Search"
-            //   ></img>
-            // </button>
-            <div className="bg-[#6fa6f94d] flex justify-center w-[50px] my-[3px] px-2 border rounded-sm ">
-              <motion.div
-                className=" flex justify-center  "
-                animate={{
-                  scale: 1,
-                  rotate: 360,
-                }}
-              >
-                <button className="" onClick={() => setShowSearch(!showSearch)}>
-                  <img src={Search_Magnifying_Glass} alt="Search"></img>
-                </button>
-              </motion.div>
+            <div className="flex  justify-center items-center  h-[49px] search-div">
+              <div className="bg-[#6fa6f94d] flex justify-center md:justify-center py-2  w-[40px] md:w-[50px] border rounded-sm">
+                <motion.div
+                  className="flex justify-center"
+                  animate={{
+                    scale: 1,
+                    rotate: 360,
+                  }}
+                >
+                  <button
+                    className=""
+                    onClick={() => setShowSearch(!showSearch)}
+                  >
+                    <img src={Search_Magnifying_Glass} alt="Search" />
+                  </button>
+                </motion.div>
+              </div>
             </div>
           ) : (
-            <div className="flex   justify-center items-center ">
+            <div className="flex   justify-center items-center search-div">
               <div className="relative  flex justify-center  ">
                 <input
                   className={`w-auto rounded-none rounded-s-sm border-[#6fa6f94d]    text-[16px] h-[39px]    pl-2 border-[0.5px]   focus:bg-white outline-none   placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[16px]  md:w-[230px] md:h-[45px]  `}

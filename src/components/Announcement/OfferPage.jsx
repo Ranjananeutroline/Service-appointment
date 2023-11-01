@@ -41,7 +41,7 @@ setAddAnnouncementModalOpen(true)
   };
 
   return (
-    <div className="flex flex-col px-[10px] sm:px-[20px] md:px-[50px] py-4 w-full  gap-3">
+    <div className="flex flex-col px-[10px] sm:px-[20px] md:px-[50px] py-4 w-full  gap-3 announce-main">
       <Modal
         open={addmodalOpen}
         onClose={closeAddModal}
@@ -67,7 +67,7 @@ setAddAnnouncementModalOpen(true)
         <AddAnnouncementModal />
       </Modal>
       <div className="flex  items-center justify-between w-full">
-        <h1 className="text-[20px] md:text-[27px] text-[#3F26A5] ">Announcement</h1>
+        <h1 className="text-[27px] text-[#3F26A5] ">Announcement</h1>
         
         {/* <button
          className="flex items-center justify-center bg-[#e7f4fb] border shadow-md gap-2 border px-1 py-1 sm:px-3 sm:py-2 text-center text-[#939af8] text-inter text-[14px] md:text-[16px] font-[600] rounded-[3px]"

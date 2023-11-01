@@ -51,8 +51,8 @@
 
 
 @media screen and (max-width: 800px) {
-  .customModalSucess {
-    width: 80%; /* Adjust the width for small screens */
+  .customModalCalender {
+    width: 50%; /* Adjust the width for small screens */
   }
 }
 @media screen and (max-width: 400px) {
