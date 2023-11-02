@@ -89,7 +89,7 @@ setAddAnnouncementModalOpen(true)
               activeTab === "offers"
                 ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
                 : ""
-            } h-[50px] w-[100px]`}
+            } h-[50px] w-[100px] btn-select`}
             style={
               activeTab === "offers"
                 ? {
@@ -110,7 +110,7 @@ setAddAnnouncementModalOpen(true)
               activeTab === "announcement"
                 ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
                 : ""
-            } h-[50px] w-[150px]`}
+            } h-[50px] w-[150px] btn-select`} 
             style={
               activeTab === "announcement"
                 ? {
@@ -128,7 +128,7 @@ setAddAnnouncementModalOpen(true)
               activeTab === "expired"
                 ? "border-gray-300  bg-gradient-to-b from-gray-100 via-white to-transparent shadow-inner inset-x-0 inset-y-2 bg-white"
                 : ""
-            } h-[50px] w-[100px]`}
+            } h-[50px] w-[100px] btn-select`}
             style={
               activeTab === "expired"
                 ? {

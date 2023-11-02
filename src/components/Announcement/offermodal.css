@@ -73,6 +73,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 80%;
  } 
 }
+@media only screen and (max-width: 430px){
+  .select-offer-main{
+   width: 70%;
+  } 
+  .btn-select{
+    font-size: 13px;
+    height: 40px;
+  }
+ }
 @media screen and (max-width: 767px){
   .add-offers-form{
     padding-top: 1rem;

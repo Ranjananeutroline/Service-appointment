@@ -114,7 +114,7 @@ const Expired = () => {
                     alt="radio"
                     className="w-[12x] h-[12px] e-radio-img"
                   />
-                  <p className="text-[13px] w-[100px]">{offer.title}</p>
+                  <p className="text-[13px] w-[100px] offer-t">{offer.title}</p>
                   <p className="text-[13px] text-[#4A55A2] font-[500] w-[175px] e-right-p">
                     {offer.validity}
                   </p>
@@ -195,7 +195,7 @@ const Expired = () => {
                     alt="radio"
                     className="w-[12x] h-[12px] e-radio-img"
                   />
-                  <p className="text-[13px] w-[120px]">{announcement.title}</p>
+                  <p className="text-[13px] w-[120px] ann-t">{announcement.title}</p>
                   <p className="text-[13px] text-[#4A55A2] w-[175px] font-[500] e-right-p">
                     {announcement.validity}
                   </p>
