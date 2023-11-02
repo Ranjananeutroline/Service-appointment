@@ -61,7 +61,7 @@ export const DeactivateAccount = ({
         open={openDeactivatePopup}
         onClose={handleDeactivatePopup}
         classNames={{
-          overlay: "customOverlay",
+          overlay: "customOverlay deactiveOverlay",
           modal: "customModal deactiveModal",
           closeButton: "closeIconInDeactivateAccount",
         }}

@@ -59,7 +59,9 @@ overflow-x: hidden;
   max-width: 400px;
   margin: 10px auto;
 }
-
+.otpOverlay{
+  background: #000000c9!important;
+}
 
 @media only screen and (max-width: 800px){
   .otpModal{

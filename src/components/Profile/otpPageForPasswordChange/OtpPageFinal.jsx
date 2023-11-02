@@ -137,7 +137,7 @@ export default function App({
         onClose={handleOtpClose}
         center
         classNames={{
-          overlay: "customOverlay",
+          overlay: "customOverlay otpOverlay",
           modal: "customModal otpModal",
           // closeButton: "closeIconInOtpPage",
         }}

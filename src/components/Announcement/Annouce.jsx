@@ -291,12 +291,12 @@ setAddAnnouncementModalOpen(true)
 
             <div className="flex px-[20px] items-center justify-between gap-5">
               <div
-                style={{ display: "flex", gap: "10px", paddingLeft: "25px" }}
+                style={{ display: "flex", gap: "10px", paddingLeft: "25px", width:"70%" }}
               >
-                <p className="text-[13px] font-normal">Valid upto:</p>
-                <p className="text-[13px] text-[#4A55A2]  font-[500] a-right-p">
+                <p className="text-[13px] font-normal">Valid upto: {announcement.validity}</p>
+                {/* <p className="text-[13px] text-[#4A55A2]  font-[500] a-right-p">
                   {announcement.validity}
-                </p>
+                </p> */}
               </div>
               <div className="edit-trash-container">
                 <div

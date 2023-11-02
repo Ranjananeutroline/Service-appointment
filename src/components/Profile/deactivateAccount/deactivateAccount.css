@@ -8,16 +8,14 @@
   background-color: none;
   overflow-x: hidden;
 }
-
+.deactiveOverlay{
+  background: #000000c9!important;
+}
 .customOverlay{
   /* background-color:rgba(255,255,255,0.7); */
  
 }
-@media screen and (max-width: 600px) {
-  .customModal {
-    width: 90%; 
-  }
-}
+
 
 @media screen and (max-width: 768px){
   .deactiveModal{

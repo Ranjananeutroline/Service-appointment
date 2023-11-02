@@ -154,7 +154,7 @@ const AddOffersModal = () => {
               className={`w-full rounded-[5px]  text-[14px] md:h-[90px] m-2 pl-[12px] border-[0.5px]  
               focus:bg-white focus:outline-none focus:ring-0.5 focus:ring-slate-500 
                placeholder:text-[#8B8989] bg-[#dceaff4d]   placeholder:text-[13px]  md:w-[400px]
-                md:h-[45px] md:placeholder:text-[15px] md:pl-[12px] pb-5 add-input ${
+                md:h-[45px] md:placeholder:text-[15px] md:pl-[12px] pb-5 add-input off-d ${
                 errors.description && touched.description
                   ? "input-error"
                   : "border border-solid border-1  border-[#DDE7F2]"

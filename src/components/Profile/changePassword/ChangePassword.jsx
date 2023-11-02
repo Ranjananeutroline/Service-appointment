@@ -139,14 +139,14 @@ export const ChangePassword = ({
         onClose={handleCloseChangePasswordPopup}
         center
         classNames={{
-          overlay: "customOverlay",
+          overlay: "customOverlay passwordOverlay",
           modal: "customModal passwordModal",
         }}
       >
         <div className=" flex flex-col gap-1 w-full items-center p-4 md:p-6 bg-[#FFFFFF]">
-          <div className="flex flex-col gap-4 items-center">
+          <div className="flex flex-col gap-4 items-center w-full">
             <h1 className="text-[18px] md:text-[22px]">Change Your Password</h1>
-            <div>
+            <div className="w-full">
               <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                 <div className="relative">
                   <input
