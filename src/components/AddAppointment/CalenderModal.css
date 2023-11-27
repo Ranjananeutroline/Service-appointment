@@ -1,0 +1,17 @@
+.customModalCalender {
+  background-color: #f8f8fa !important;
+}
+.customModalSucess {
+  background-color: #fafafa;
+  padding: 0;
+}
+@media screen and (max-width: 800px) {
+  .customModalSucess {
+    width: 80%; /* Adjust the width for small screens */
+  }
+}
+@media screen and (max-width: 400px) {
+  .customModalSucess {
+    width: 90%; /* Adjust the width for small screens */
+  }
+}

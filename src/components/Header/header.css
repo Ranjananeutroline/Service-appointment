@@ -1,0 +1,28 @@
+/* .header{
+    height: 80px;
+    background-color: #78C1F3;
+    width: 100%;
+} */
+.header{
+    height: 65px;
+    background-color: #1a98ecbd!important;
+    width: 100%;
+}
+/* .header-div{
+    max-width: 100%;
+    display: flex;
+    background: #78C1F3;
+    height: 65px;
+    justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 795px) {
+    .logo-title img{
+        width: 90px;
+        height: 55px;
+    }
+    .logo-title h3{
+        font-size: 25px;
+    }
+} */
